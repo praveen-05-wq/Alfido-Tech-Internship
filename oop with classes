@@ -1,0 +1,28 @@
+class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks");
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        Animal genericAnimal = new Animal();
+        Dog myDog = new Dog();
+
+        System.out.println("Calling makeSound() on Animal:");
+        genericAnimal.makeSound(); 
+
+        System.out.println("Calling makeSound() on Dog:");
+        myDog.makeSound();        
+Animal animalDog = new Dog();
+        System.out.println("Calling makeSound() on Animal reference pointing to Dog:");
+        animalDog.makeSound();      
+    }
+}
